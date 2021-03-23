@@ -1,1 +1,5 @@
 node_modules
+/.idea/vcs.xml
+/.idea/modules.xml
+/.env
+/.idea/field_notes_server.iml
