@@ -26,7 +26,7 @@ const taskService = {
     document.mowHeight = mowHeight
     document.date = date
     document.zone = zone
-    document.photo = photo
+    document.photo = photo.name
 
     await document.save()
 

@@ -3,3 +3,5 @@ node_modules
 /.idea/modules.xml
 /.env
 /.idea/field_notes_server.iml
+/.idea/workspace.xml
+/.idea/jsLibraryMappings.xml

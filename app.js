@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const cors = require('cors')
@@ -14,6 +15,7 @@ app.use(
     origin: "http://localhost:8080",
   })
 )
+app.use('/static', express.static(path.join(__dirname, 'uploads')));
 app.use(logger( "dev"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
