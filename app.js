@@ -12,7 +12,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: "http://localhost:8080",
+    origin: "https://fieldnotes-f0ccd.web.app",
   })
 )
 app.use('/static', express.static(path.join(__dirname, 'uploads')));
