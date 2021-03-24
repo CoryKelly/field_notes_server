@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const config = require('../config/config')
 
-mongoose.connect("mongodb://localhost:27017/" + config.DB_NAME, {
+mongoose.connect(process.env.DB_URL + config.DB_NAME, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
