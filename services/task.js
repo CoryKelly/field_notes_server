@@ -11,7 +11,8 @@ const taskService = {
   create: async function (req) {
     let document = new Task()
 
-    const photo = req.files.image
+    const photo = req.files.photo
+
     await photo.mv('./uploads/' + photo.name)
 
     const { title, notes, task, product, amount, units, mowHeight, date, zone } = req.body
