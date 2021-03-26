@@ -9,7 +9,7 @@ exports.all = async (req, res) => {
 // noinspection CommaExpressionJS
 exports.create = async (req, res) => {
   const createTask = await taskService.create(req)
-
+    console.log(createTask)
   return res.status(200).json({ createTask })
 }
 
