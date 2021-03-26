@@ -10,6 +10,18 @@ require("./services/dataBase")
 
 const app = express()
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Credentials", true);
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header("Access-Control-Allow-Headers", '*');
+
+  if(req.method === 'OPTIONS') {
+    res.send()
+  } else {
+    next();
+  }
+})
 app.use(
   cors({
     origin: "https://fieldnotes-f0ccd.web.app",
